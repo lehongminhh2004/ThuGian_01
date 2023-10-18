@@ -1,68 +1,282 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-
-html {
-
-}
-
-#main {
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 #header {
-    height: 60px;
-    background-color: rgb(72, 41, 3);
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #440a04;
 }
 
-#nav, .subnav {
-    list-style-type: none;
+#header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-#nav >li {
-    display: inline-block;
+.navbar .logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.1rem;
+  text-decoration: none;
 }
 
-#nav li {
-    display: inline-block;
-    position: relative;
+.navbar .logo span {
+  color: #C06B3E;
 }
 
-#nav > li > a {
-    color: aliceblue;
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
 }
 
-#nav li a {
-    color: aliceblue;
-    text-decoration: none;
-    line-height: 60px;
-    padding: 0 26px;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #C06B3E;
+}
+
+.coffee-section {
+  height: 100vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.coffee-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.coffee-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.coffee-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.coffee-section .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.coffee-section .content button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+#footer{
+  height: 40vh;
+  background-color: #440a04;
+}
+/*  */
+.freeze-section {
+  height: 100vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.freeze-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.freeze-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.freeze-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.freeze-section .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.freeze-section .content button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+
+/*  */
+/*  */
+.tea-section {
+  height: 100vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.tea-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.tea-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.tea-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.tea-section .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.tea-section .content button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+
+/*  */
+@media (max-width: 768px) {
+  #header {
+    padding: 10px;
+  }
+
+  #header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+    
+  #hamburger-btn, #close-menu-btn {
     display: block;
-}
+  }
 
-#nav li:hover a,
-#nav .subnav li:hover a {
-    color: black;
-    background-color: aliceblue;
-}
-#nav .subnav {
-    position: relative;
-    background-color: aliceblue;
-}
+  .navbar .menu-links {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    padding: 70px 40px 0;
+    transition: left 0.2s ease;
+  }
 
-#nav .subnav a {
-    color: black;
-    padding: 0 16px;
-}
+  #header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
 
-#navigation {
+  .navbar a {
+    color: #000;
+  }
 
-}
+  .coffee-section .content,
+  .freeze-section .content,
+  .tea-section .content {
+    text-align: center;
+  }
+  .coffee-section .content :is(h2, p),
+  .coffee-section .content :is(h2, p),
+  .coffee-section .content :is(h2, p) {
+    max-width: 100%;
+  }
 
-#footer {
-
+  .coffee-section .content h2,
+  .freeze-section .content h2,
+  .tea-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .coffee-section .content button,
+  .freeze-section .content button,
+  .tea-section .content button {
+    padding: 9px 18px;
+  }
 }
