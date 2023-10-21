@@ -5,115 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
     <title>Document</title>
     <script src="./asset/myScript.js"></script>
-    <style>
-        * {
-            padding: 0%;
-            box-sizing: border-box;
-        }
-
-        .item {
-            background-color: aqua;
-            width: 200px;
-            margin-right: 15px;
-
-        }
-
-        .checked {
-            color: yellow;
-        }
-
-        .box {
-            display: flex;
-            text-align: center;
-        }
-
-        .item1 {
-            background-color: aqua;
-            width: 200px;
-            height: 400px;
-            margin-right: 15px;
-
-        }
-
-        .box1 {
-            /* width :208px;
-            height:370px; */
-            display: flex;
-            text-align: center;
-
-
-        }
-
-        #content {
-            min-height: 500px;
-            background-color: chartreuse;
-            margin-top: 40px;
-        }
-
-        img {
-
-            width: 100%;
-            height: 200px;
-        }
-
-        .div1 {
-            margin-top: 210px;
-        }
-
-        .div2 {
-            display: flex;
-
-        }
-
-        .div2 div {
-            margin-left: 20px;
-        }
-
-        #demo {
-            /* text-align: center; */
-            font-size: 30px;
-            margin-top: 0px;
-        }
-    </style>
 </head>
 
 <body>
     <div id="container">
         <div id="header">
-            <h2> Ưu đãi của bạn </h2>
+            <h2 style="margin-left: 140px;"> Ưu đãi của bạn </h2>
             <div class="box">
                 <div class="item">
-                    <h3> Voucher </h3>
+                    <h3 style="color: brown;"> Voucher </h3>
                     <p> Voucher cho hóa đơn 45k cho hóa đơn từ 910.000 đ </p>
-                    lorem2<button>lưu</button>
+                    <div>
+                        <div class="voucher">
+                            <button class="voucher-button" onclick="redeemVoucher(1)">
+                                <div class="voucher-text">
+                                    <p id="voucher1"></p> Lưu
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <h3> Voucher </h3>
-                    <p> Voucher cho hóa đơn 45k cho hóa đơn từ 910.000 đ </p>
-                    lorem2<button>lưu</button>
+                    <h3 style="color: brown;"> Ưu đãi tại cửa hàng </h3>
+                    <p> Nhận ưu đãi tại quán khi mua hàng tại website chính hãng Highlands Coffee. </p>
+                    <div>
+                        <div class="voucher">
+                            <button class="voucher-button" onclick="redeemVoucher(2)">
+                                <div class="voucher-text">
+                                    <p id="voucher2"></p> Lưu
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <h3> Voucher </h3>
-                    <p> Voucher cho hóa đơn 45k cho hóa đơn từ 910.000 đ </p>
-                    lorem2<button>lưu</button>
+                    <h3 style="color: brown;"> Giao hàng toàn quốc </h3>
+                    <p> Đặt hàng online. Giao hàng tận nơi với phí ship chỉ từ 25K. </p>
+                    <div>
+                        <div class="voucher">
+                            <button class="voucher-button" onclick="redeemVoucher(3)">
+                                <div class="voucher-text">
+                                    <p id="voucher3"></p> Lưu
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="item">
-                    <h3> Voucher </h3>
-                    <p> Voucher cho hóa đơn 45k cho hóa đơn từ 910.000 đ </p>
-                    lorem2<button>lưu</button>
+                    <h3 style="color: brown;"> Deal hời </h3>
+                    <p> Giảm giá lên đến 30% với sản phẩm cà phê rang xay </p>
+                    <div>
+                        <div class="voucher">
+                            <button class="voucher-button" onclick="redeemVoucher(4)">
+                                <div class="voucher-text">
+                                    <p id="voucher4"></p> Lưu
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
         <div id="content">
             <div class="div2">
-                <span style='font-size:30px;'>&#128178;</span>
-                <div style="font-size: 30px; color: brown;"><b> Deal đang diễn ra </b> </div>
-                <div id="demo"></div>
+                <img src="./asset/img/samset.webp" alt=" " class="anhsamset">
+                <div style="font-size:27px; color: brown;margin-left:20px;margin-bottom: 10px"><b> Deal đang diễn ra |
+                    </b> </div>
+                <div class="countdown" id="countdown1">
+                    <span id="days1"></span> : <br>
+                    <span id="hours1"></span> :
+                    <span id="minutes1"></span> :
+                    <span id="seconds1"></span>
+                </div>
+                <script src="./asset/myScript.js"></script>
             </div>
-
             <div class="box1">
                 <div class="item1">
                     <img src="./asset/img/ctm-10.webp" alt="">
@@ -123,7 +92,16 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span><br>
-                    <button style="font-size:24px">Button <i class="fa fa-shopping-cart"></i></button>
+                    <div class="countdown" id="countdown2">
+                        <span id="days2"></span> d
+                        <span id="hours2"></span> h
+                        <span id="minutes2"></span> m
+                        <span id="seconds2"></span> s
+                    </div>
+                    <script src="./asset/myScript.js"></script>
+                    <button style="font-size:24px"><a
+                            href="https://shop.highlandscoffee.com.vn/tang-01-goi-du-lich-ca-phe-bot-truyen-thong-highlands-coffee-1kg">Button
+                            <i class="fa fa-shopping-cart"></a></i></button>
                 </div>
                 <div class="item1">
                     <img src="./asset/img/anh2.webp" alt="">
@@ -133,7 +111,16 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span><br>
-                    <button style="font-size:24px">Button <i class="fa fa-shopping-cart"></i></button>
+                    <div class="countdown" id="countdown3">
+                        <span id="days3"></span> d
+                        <span id="hours3"></span> h
+                        <span id="minutes3"></span> m
+                        <span id="seconds3"></span> s
+                    </div>
+                    <script src="./asset/myScript.js"></script>
+                    <button style="font-size:24px"><a
+                            href="https://shop.highlandscoffee.com.vn/mua-2-tang-3-combo-2-ca-phe-truyen-thong-highlands-coffee-1kg-va-goi-200gr">Button
+                            <i class="fa fa-shopping-cart"></a></i></button>
                 </div>
                 <div class="item1">
                     <img src="./asset/img/anh3.webp" alt="">
@@ -143,19 +130,36 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span><br>
-                    <button style="font-size:24px">Button <i class="fa fa-shopping-cart"></i></button>
+                    <div class="countdown" id="countdown4">
+                        <span id="days4"></span> d
+                        <span id="hours4"></span> h
+                        <span id="minutes4"></span> m
+                        <span id="seconds4"></span> s
+                    </div>
+                    <script src="./asset/myScript.js"></script>
+                    <button style="font-size:24px"><a
+                            href="https://shop.highlandscoffee.com.vn/mua-2-tang-1-ca-phe-truyen-thong-highlands-coffee-1kg">Button
+                            <i class="fa fa-shopping-cart"></a></i></button>
                 </div>
                 <div class="item1">
                     <img src="./asset/img/anh4.webp" alt="">
-
-                    <p>[TẶNG GỐI HIGHLANDS 189K] Combo 4 Cà Phê Sữa Hoà Tan 3in1 Highlands Coffee (hộp 20 Gói x
-                        17g/gói)</p>
+                    <p>[TẶNG GỐI HIGHLANDS 189K] Combo 4 Cà Phê Sữa Hoà Tan 3in1 Highlands Coffee (hộp 20 Gói x 17g/gói)
+                    </p>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star "></span><br>
-                    <button style="font-size:24px">Button <i class="fa fa-shopping-cart"></i></button>
+                    <div class="countdown" id="countdown5">
+                        <span id="days5"></span> d
+                        <span id="hours5"></span> h
+                        <span id="minutes5"></span> m
+                        <span id="seconds5"></span> s
+                    </div>
+                    <script src="./asset/myScript.js"></script>
+                    <button style="font-size:24px"><a
+                            href="https://shop.highlandscoffee.com.vn/combo-2-goi-ca-phe-rang-xay-truyen-thong-highlands-coffee-200g-goi">Button
+                            <i class="fa fa-shopping-cart"></a></i></button>
                 </div>
                 <div class="item1">
                     <img src="./asset/img/anh5.webp" alt="">
@@ -166,7 +170,17 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span><br>
-                    <button style="font-size:24px">Button <i class="fa fa-shopping-cart"></i></button>
+                    <div class="countdown" id="countdown6">
+                        <span id="days6"></span> d
+                        <span id="hours6"></span> h
+                        <span id="minutes6"></span> m
+                        <span id="seconds6"></span> s
+                    </div>
+                    <script src="./asset/myScript.js"></script>
+                    6
+                    <button style="font-size:24px"><a
+                            href="https://shop.highlandscoffee.com.vn/tang-goi-highlands-189k-combo-4-ca-phe-sua-hoa-tan-3in1-highlands-coffee-hop-20-goi-x-17g-goi">Button
+                            <i class="fa fa-shopping-cart"></a></i></button>
                 </div>
             </div>
         </div>
