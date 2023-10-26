@@ -12,6 +12,7 @@
 .anhsamset {
     width: 24px;
     height: 30px;
+    display: inline-block;
 }
 
 .checked {
@@ -61,6 +62,8 @@ img {
 
 .div2 {
     display: flex;
+    align-items: left;
+    text-align: left;
     margin-left: 140px;
     background-color: #FFDECF;
     margin-right: 128px;
@@ -69,9 +72,9 @@ img {
     /* Căn giữa ngang */
     align-items: center;
     /* Căn giữa dọc */
-    height: 50px;
+    height: 70px;
     /* Chiều cao của phần tử chứa văn bản */
-    line-height: 40px;
+    margin-top: auto;
 }
 
 #countdown1 {
@@ -137,24 +140,34 @@ span {
     /* Giảm khoảng cách giữa border và nội dung */
     width: 40px;
     /* Điều chỉnh chiều rộng */
-    height: 70px;
+    height: 30px;
     /* Điều chỉnh chiều cao */
 }
 
 .voucher-text {
-    flex: 1;
+    flex: 10;
     /* Chia đều khoảng trống trong phần tử voucher */
 }
 
 .voucher-button {
     display: flex;
-    margin-left:80px;
-    width: 20000px;
-    height: 80px;
-    background-color: brown;/* Màu nền của nút */
-    color: white;/* Màu chữ trên nút */
-    border: none; /* Loại bỏ border */
-    border-radius: 5px; /* Bo góc cho nút */
-    font-size: 14px;/* Kích thước chữ */
-    cursor: pointer;/* Đổi con trỏ khi di chuột vào nút */
+    margin-left: 55px;
+    /* Điều chỉnh khoảng cách giữa nút và phần tử voucher */
+    width: 100px;
+    /* Điều chỉnh chiều rộng của nút */
+    height: 40px;
+    /* Điều chỉnh chiều cao của nút */
+    background-color: brown;
+    /* Màu nền của nút */
+    color: white;
+    /* Màu chữ trên nút */
+    border: none;
+    /* Loại bỏ border */
+    border-radius: 5px;
+    /* Bo góc cho nút */
+    font-size: 14px;
+    /* Kích thước chữ */
+    cursor: pointer;
+    /* Đổi con trỏ khi di chuột vào nút */
+    margin-bottom: 50px;
 }
