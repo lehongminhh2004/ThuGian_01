@@ -11,18 +11,24 @@ html,body{
   width: 100%;
   place-items: center;
   background: #f2f2f2;
+  background: url('https://images.pexels.com/photos/18725139/pexels-photo-18725139/free-photo-of-ca-phe-u-ng-ly-th-t.jpeg?auto=compress&cs=tinysrgb&w=600') center center no-repeat;
+  background-size: cover;
   /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 ::selection{
   background: #4158d0;
   color: #fff;
 }
-.wrapper{
+.wrapper {
   width: 380px;
-  background: #fff;
+  background: url('https://images.pexels.com/photos/18723100/pexels-photo-18723100/free-photo-of-thi-t-k-d-n-i-th-t-da-gh-banh.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Thay đổi 'đường_dẫn_đến_hình_nền.jpg' thành đường dẫn thật đúng của hình nền */
+  background-size: cover; /* Đảm bảo hình nền kích thước phù hợp */
+  background-repeat: no-repeat; /* Loại bỏ lặp lại nếu cần */
+  background-position: center; /* Căn giữa hình nền */
   border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
+
 .wrapper .title{
   font-size: 35px;
   font-weight: 600;
@@ -31,7 +37,7 @@ html,body{
   color: #fff;
   user-select: none;
   border-radius: 15px 15px 0 0;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #440a04;
 }
 .wrapper form{
   padding: 10px 30px 50px 30px;
@@ -109,7 +115,7 @@ form .field input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  background: #440a04;
   transition: all 0.3s ease;
 }
 form .field input[type="submit"]:active{
