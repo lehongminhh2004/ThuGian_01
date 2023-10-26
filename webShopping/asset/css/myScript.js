@@ -72,7 +72,7 @@ updateCountdown("countdown6", "days6", "hours6", "minutes6", "seconds6");
 
  // Function to generate a random voucher code
  function generateRandomVoucher() {
-  const characters = ' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let voucher = '';
   for (let i = 0; i < 7; i++) {
       const randomIndex = Math.floor(Math.random() * characters.length);
@@ -82,7 +82,7 @@ updateCountdown("countdown6", "days6", "hours6", "minutes6", "seconds6");
 }
 
 // Update voucher elements with random voucher codes
-for (let i = 1; i <= 7; i++) {
+for (let i = 1; i <= 10; i++) {
   const voucherElement = document.getElementById(`voucher${i}`);
   voucherElement.textContent = generateRandomVoucher();
 }
@@ -90,3 +90,6 @@ for (let i = 1; i <= 7; i++) {
 function redeemVoucher(voucherNumber) {
   alert(`Đã lưu ${voucherNumber}`);
 }
+
+
+//đánh giá 5 sao
