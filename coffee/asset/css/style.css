@@ -52,6 +52,8 @@
   color: #C06B3E;
 }
 
+/*  */
+
 .coffee-section {
   height: 100vh;
   background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
@@ -61,27 +63,52 @@
   align-items: center;
   padding: 0 20px;
 }
-
-.coffee-section .content {
+.freeze-section {
+  height: 100vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.tea-section {
+  height: 100vh;
+  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.coffee-section .content,
+.freeze-section .content,
+.tea-section .content{
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   color: #fff;
 }
 
-.coffee-section .content h2 {
+.coffee-section .content h2,
+.freeze-section .content h2,
+.tea-section .content h2{
   font-size: 3rem;
   max-width: 600px;
   line-height: 70px;
 }
 
-.coffee-section .content p {
+.coffee-section .content p,
+.freeze-section .content p,
+.tea-section .content p{
   font-weight: 300;
   max-width: 600px;
   margin-top: 15px;
 }
 
-.coffee-section .content button {
+.coffee-section .content button,
+.freeze-section .content button,
+.tea-section .content button{
   background: #fff;
   padding: 12px 30px;
   border: none;
@@ -92,30 +119,51 @@
   font-weight: 500;
   transition: 0.2s ease;
 }
-
-.coffee-section .content button:hover {
-  color: #fff;
-  background: #C06B3E;
+.coffee-section .content button a,
+.freeze-section .content button a,
+.tea-section .content button a{
+  color: #000;
 }
-/*  */
 
-.aboutcontent{
-  height: 578px;
+.coffee-section .content button:hover,
+.freeze-section .content button:hover,
+.tea-section .content button:hover{
+  background: #6d342d;
+}
+
+/*  */ 
+
+#aboutcontent{
+  max-height: 578px;
+  /* height: 578px; */
   width: 100%;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #fff;
 }
-.aboutcontent img{
-  height: 578px;
+
+#aboutcontent img{
+  max-height: 578px;
+  /* height: 578px; */
   width: 38%;
   float: left;
+  display: flex;
 }
-.content{
-    
+
+#aboutcontent h1{
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+.intro{
+    padding: 70px 20px;
     width: 60%;
     float: right;
     margin: 0 auto;
-    margin-left: 0 15px;
+    margin-left: 0 20px;
+}
+.intro p{
+  
 }
 /*  */
 #close-menu-btn {
@@ -131,104 +179,6 @@
   cursor: pointer;
   display: none;
 }
-
-
-/*  */
-.freeze-section {
-  height: 100vh;
-  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.freeze-section .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  color: #fff;
-}
-
-.freeze-section .content h2 {
-  font-size: 3rem;
-  max-width: 600px;
-  line-height: 70px;
-}
-
-.freeze-section .content p {
-  font-weight: 300;
-  max-width: 600px;
-  margin-top: 15px;
-}
-
-.freeze-section .content button {
-  background: #fff;
-  padding: 12px 30px;
-  border: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  margin-top: 38px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-
-.freeze-section .content button:hover {
-  color: #fff;
-  background: #C06B3E;
-}
-
-/*  */
-/*  */
-.tea-section {
-  height: 100vh;
-  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.tea-section .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  color: #fff;
-}
-
-.tea-section .content h2 {
-  font-size: 3rem;
-  max-width: 600px;
-  line-height: 70px;
-}
-
-.tea-section .content p {
-  font-weight: 300;
-  max-width: 600px;
-  margin-top: 15px;
-}
-
-.tea-section .content button {
-  background: #fff;
-  padding: 12px 30px;
-  border: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  margin-top: 38px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-
-.tea-section .content button:hover {
-  color: #fff;
-  background: #C06B3E;
-}
-
-/*  */
 @media (max-width: 768px) {
   #header {
     padding: 10px;
@@ -305,7 +255,7 @@
   display: flex;
   text-align: center;
   width: 100%;
-  padding: 0 0px;
+  padding: 10px 0px;
   margin: 0 auto;
 }
 #row{
@@ -321,18 +271,18 @@
 }
 .footerSocial{
   height: 25px;
-  width: 15%;
+  width: 16%;
   align-items: center;
 }
 .footerCopy{
   height: 25px;
-  width: 45%;
+  width: 48%;
   align-items: center;
 }
 
 .footerMail{
   height: 25px;
-  width: 40%;
+  width: 36%;
   align-items: center;
 }
 
@@ -343,3 +293,7 @@ a {
 i{
   font-size: 20px;
 }
+
+
+
+
