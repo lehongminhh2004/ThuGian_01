@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="./asset/css/cart.css">
+</head>
+
+<body>
+    <h1>Chọn sản phẩm để thêm vào giỏ hàng</h1>
+
+    <div class="products">
+        <!-- Sản phẩm cà phê -->
+        <div>
+            <div class="product">
+                <img src="./asset/css/img/capheden.jpg" alt="Cà phê ">
+                <h3>Cà phê đen</h3>
+                <p>Giá: $3.99</p>
+                <button onclick="addToCart('Cà phê đen', 3.99)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/caphesua.jpg" alt="Cà phê ">
+                <h3>Cà phê sữa</h3>
+                <p>Giá: $4.49</p>
+                <button onclick="addToCart('Cà phê sữa', 4.49)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/bacxiu.jpg" alt="Cà phê ">
+                <h3>Bạc xỉu</h3>
+                <p>Giá: $3.79</p>
+                <button onclick="addToCart('Bạc xỉu', 3.79)">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <!-- Sản phẩm trà -->
+        <div>
+            <div class="product">
+                <img src="./asset/css/img/traxanh.jpg" alt="Trà 1">
+                <h3>Trà xanh</h3>
+                <p>Giá: $2.99</p>
+                <button onclick="addToCart('Trà xanh', 2.99)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/tradao.jpg" alt="Trà 2">
+                <h3>Trà đào</h3>
+                <p>Giá: $3.49</p>
+                <button onclick="addToCart('Trà đào', 3.49)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/tralasen.jpg" alt="Trà 3">
+                <h3>Trà lá sen</h3>
+                <p>Giá: $2.79</p>
+                <button onclick="addToCart('Trà lá sen', 2.79)">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        <!-- Sản phẩm PhinDi -->
+        <div>
+            <div class="product">
+                <img src="./asset/css/img/PDkemsua.jpg" alt="Đá xay 1">
+                <h3>PhinDi Kem Sữa</h3>
+                <p>Giá: $3.79</p>
+                <button onclick="addToCart('PhinDi Kem Sữa', 3.79)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/PDhanhnhan.jpg" alt="Đá xay 2">
+                <h3>PhinDi Hạnh Nhân</h3>
+                <p>Giá: $4.19</p>
+                <button onclick="addToCart('PhinDi Hạnh Nhân', 4.19)">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product">
+                <img src="./asset/css/img/PDchoco1.jpg" alt="Đá xay 3">
+                <h3>PhinDi Choco</h3>
+                <p>Giá: $3.99</p>
+                <button onclick="addToCart('PhinDi Choco', 3.99)">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="cart">
+        <h2>Tổng số tiền: </h2>
+        <ul id="cart-items">
+            <!-- Sản phẩm trong giỏ hàng sẽ được hiển thị ở đây -->
+        </ul>
+        <p>Tổng tiền: <span id="total-price">$0.00</span></p>
+        <button onclick="checkout()">Thanh toán</button>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+
+</html>
