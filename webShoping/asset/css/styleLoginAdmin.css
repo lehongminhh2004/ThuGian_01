@@ -1,26 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+/* Thay đổi màu chủ đạo và màu chữ */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 html,body{
   display: grid;
   height: 100%;
   width: 100%;
   place-items: center;
-  background: rgb(255, 255, 255);
+  background: #f2f2f2;
 }
 ::selection{
-  background: #ffffff;
+  background: #4158d0;
   color: #fff;
 }
 .wrapper{
   width: 380px;
-  background: rgb(255, 255, 255);
+  background: #fff;
   border-radius: 15px;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
 .wrapper .title{
   font-size: 35px;
@@ -30,7 +31,8 @@ html,body{
   color: #fff;
   user-select: none;
   border-radius: 15px 15px 0 0;
-  background: #0866ff;
+  background: #6D342D;
+  
 }
 .wrapper form{
   padding: 10px 30px 50px 30px;
@@ -40,38 +42,33 @@ html,body{
   width: 100%;
   margin-top: 20px;
   position: relative;
+  margin-bottom: 20px;
 }
-.wrapper form .field input{
-  height: 100%;
-  width: 100%;
+
+.field input {
+  width: calc(30% - 20px); /* Tính toán chiều rộng để giữ khoảng trắng 10px ở mỗi bên */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
   outline: none;
-  font-size: 17px;
-  padding-left: 20px;
-  border: 1px solid lightgrey;
-  border-radius: 25px;
-  transition: all 0.3s ease;
 }
-.wrapper form .field input:focus,
-form .field input:valid{
-  border-color: #4158d0;
-}
-.wrapper form .field label{
+
+.field label {
+  color: #bdc3c7;
   position: absolute;
   top: 50%;
-  left: 20px;
-  color: #999999;
-  font-weight: 400;
-  font-size: 17px;
-  pointer-events: none;
+  left: 10px;
   transform: translateY(-50%);
-  transition: all 0.3s ease;
+  pointer-events: none;
+  transition: 0.5s;
 }
 form .field input:focus ~ label,
 form .field input:valid ~ label{
   top: 0%;
   font-size: 16px;
-  color: #000000;
-  background: #ffffff;
+  color: #4158d0;
+  background: #fff;
   transform: translateY(-50%);
 }
 form .content{
@@ -81,6 +78,11 @@ form .content{
   font-size: 16px;
   align-items: center;
   justify-content: space-around;
+}
+form .content .checkbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 form .content input{
   width: 15px;
@@ -92,7 +94,6 @@ form .content label{
   user-select: none;
   padding-left: 5px;
 }
-
 form .content .pass-link{
   color: "";
 }
@@ -104,23 +105,18 @@ form .field input[type="submit"]{
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  background: #0866ff;
+  background: #6D342D;
   transition: all 0.3s ease;
 }
 form .field input[type="submit"]:active{
   transform: scale(0.95);
 }
-form .signup-link{
-  color: #262626;
-  margin-top: 20px;
-  text-align: center;
-}
-form .pass-link a,
-form .signup-link a{
-  color: #000000;
+form .pass-link a{
+  color: #4158d0;
   text-decoration: none;
+  color: #3498db; /* Màu xanh dương */
+  font-weight: bold;
 }
-form .pass-link a:hover,
-form .signup-link a:hover{
+form .pass-link a:hover{
   text-decoration: underline;
 }

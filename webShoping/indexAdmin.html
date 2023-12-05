@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaiThangNguHaiThangNgu COFFEE</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="indexAdmin.js"></script>
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a class="logo" href="#">Dumb-Dumb COFFEE<span>.</span></a>
+            </div>
+            <div class="nav-menu">
+                <div class="dropdown">
+                    <button class="dropbtn">Thực đơn
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="row">
+                            <div class="column">
+                                <a href="#"> <!-- Thêm id "coffee-section" và link tới phần "Cà phê" -->
+                                    <h3>Cà Phê</h3>
+                                </a>
+                                <a href="#">Bạc Xỉu</a>
+                                <a href="#">Cà Phê Đen</a>
+                                <a href="#">Cà Phê Sữa</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">
+                                    <h3>PhinDi</h3>
+                                </a>
+                                <a href="#">PhinDi Sữa</a>
+                                <a href="#">PhinDi Hạnh Nhân</a>
+                                <a href="#">PhinDi Choco</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">
+                                    <h3>Trà</h3>
+                                </a>
+                                <a href="#">Trà Xanh</a>
+                                <a href="#">Trà Đào</a>
+                                <a href="#">Trà Lá Sen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Search" class="search-input">
+                <div class="search-icon">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+            </div>
+
+            <div class="sign-in">
+                <i class="ti-user">
+                    <a href="./loginAdmin.html">Admin</a>
+                </i>
+            </div>
+
+
+        </nav>
+    </div>
+
+    <section class="hero-section">
+        <img src="" alt="">
+    </section>
+
+    <section class="shop-section" id="coffee-section"> <!-- Thêm id "coffee-section" -->
+        <div class="shop-images">
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/bacxiu.jpg" alt="Bạc xỉu">
+                <h4>Bạc xỉu</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/capheden.jpg" alt="Cà phê đen">
+                <h4>Cà phê đen</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/caphesua.jpg" alt="Cà phê sữa">
+                <h4>Cà phê sữa</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+        </div>
+    </section>
+    <section class="shop-section">
+        <div class="shop-images">
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/PDkemsua.jpg" alt="card">
+                <h4>PhinDi Kem Sữa</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/PDhanhnhan.jpg" alt="card">
+                <h4>PhinDi Hạnh Nhân</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/PDchoco1.jpg" alt="card">
+                <h4>PhinDi Choco</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+        </div>
+    </section>
+    <section class="shop-section">
+        <div class="shop-images">
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/traxanh.jpg" alt="card">
+                <h4>Trà xanh</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/tradao.jpg" alt="card">
+                <h4>Trà Đào</h4>
+                <a href="./cartAdmin.html">Edit</a>
+
+            </div>
+            <div class="shop-link">
+                <h3></h3>
+                <img src="./asset/css/img/tralasen.jpg" alt="card">
+                <h4>Trà Lá Sen</h4>
+                <a href="./cartAdmin.html">Edit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thêm div cho hiển thị kết quả tìm kiếm -->
+    <div class="search-results">
+        <h2>Kết quả tìm kiếm:</h2>
+        <ul id="search-results-list"></ul>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-title">
+            Back to top
+        </a>
+        <div id="footer">
+            <div id="row">
+                <div class="footerSocial">
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-facebook"></i>
+                    </a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-instagram"></i>
+                    </a>
+                </div>
+                <div class="footerCopy">
+                    <p>© 2004 Coffee. All rights reserved.</p>
+                </div>
+                <div class="footerMail">
+                    <i class="ti-email"></i>
+                    <a href="#">customerservice@coffee.com.vn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
