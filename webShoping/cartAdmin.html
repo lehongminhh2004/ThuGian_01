@@ -11,7 +11,57 @@
 <body>
     <h1>Admin Panel</h1>
 
-    <div id="product-list">
+    <div id="product-list"><!-- admin.html -->
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Admin - Minhdeptrai COFFEE</title>
+            <link rel="stylesheet" href="./asset/css/cartAdmin.css">
+        </head>
+        <body>
+            <h1>Admin Panel</h1>
+        
+            <div id="product-list">
+                <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+            </div>
+        
+            <h2>Thêm Sản Phẩm</h2>
+            <form id="add-product-form">
+                <label for="productName">Tên Sản Phẩm:</label>
+                <input type="text" id="productName" required>
+        
+                <label for="productPrice">Giá Tiền:</label>
+                <input type="number" id="productPrice" required>
+        
+                <button type="submit">Thêm Sản Phẩm</button>
+            </form>
+        
+            <h2>Chỉnh Sửa Giá Tiền</h2>
+            <form id="edit-price-form">
+                <label for="productId">ID Sản Phẩm:</label>
+                <input type="number" id="productId" required>
+        
+                <label for="newPrice">Giá Mới:</label>
+                <input type="number" id="newPrice" required>
+        
+                <button type="submit">Chỉnh Sửa Giá</button>
+            </form>
+        
+            <h2>Xóa Sản Phẩm</h2>
+            <form id="delete-product-form">
+                <label for="deleteProductId">ID Sản Phẩm:</label>
+                <input type="number" id="deleteProductId" required>
+        
+                <button type="submit">Xóa Sản Phẩm</button>
+            </form>
+        
+            <script src="./cartAdmin.js"></script>
+        </body>
+        </html>
+        
         <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
     </div>
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đơn hàng 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .order-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer-info {
+      margin-bottom: 20px;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .product img {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .product-details {
+      flex-grow: 1;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Đơn hàng 1</h1>
+  </header>
+
+  <div class="order-container">
+    <div class="customer-info">
+      <h2>Thông tin khách hàng</h2>
+      <p><strong>Tên:</strong> Nguyễn Văn A</p>
+      <p><strong>Địa chỉ:</strong> 123 Đường ABC, Quận XYZ, Thành phố Hồ Chí Minh</p>
+    </div>
+
+    <div class="product">
+      <img src="https://placekitten.com/80/80" alt="Product Image">
+      <div class="product-details">
+        <h3>Tên sản phẩm 1</h3>
+        <p>Mô tả sản phẩm 1</p>
+        <p>Số lượng: 2</p>
+        <p>Giá: $20.00</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://placekitten.com/80/80" alt="Product Image">
+      <div class="product-details">
+        <h3>Tên sản phẩm 2</h3>
+        <p>Mô tả sản phẩm 2</p>
+        <p>Số lượng: 1</p>
+        <p>Giá: $15.00</p>
+      </div>
+    </div>
+
+    <div class="total">
+      <p><strong>Tổng cộng:</strong> $55.00</p>
+    </div>
+  </div>
+
+</body>
+</html>
