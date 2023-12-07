@@ -15,7 +15,28 @@
   <div id="header">
     <nav class="navbar">
       <div class="nav-logo">
-        <a class="logo" href="#">COFFEE<span>.</span></a>
+        <a class="logo" href="#">Hai-Len Coffee<span>.</span></a>
+      </div>
+      <div class="advanced-search">
+        <label for="search-category">Chọn loại:</label>
+        <select id="search-category" name="search-category">
+          <option value="all">Tất cả</option>
+          <optgroup label="Cà phê">
+            <option value="coffee-black">Cà phê Đen</option>
+            <option value="coffee-milk">Cà phê Sữa</option>
+            <option value="coffee-bac-xiu">Bạc Xỉu</option>
+          </optgroup>
+          <optgroup label="Phindi">
+            <option value="phindi-hanh-nhan">Phindi Hạnh Nhân</option>
+            <option value="phindi-choco">Phindi Choco</option>
+            <option value="phindi-kem-sua">Phindi Kem Sữa</option>
+          </optgroup>
+          <optgroup label="Trà">
+            <option value="tra-xanh">Trà Xanh</option>
+            <option value="tra-dao">Trà Đào</option>
+            <option value="tra-sen-vang">Trà Sen Vàng</option>
+          </optgroup>
+        </select>
       </div>
       <div class="nav-search">
         <input type="text" placeholder="Search" class="search-input">
@@ -28,7 +49,6 @@
           <a href="./loginUser.html">user</a>
         </i>
       </div>
-      
       <div class="cart">
         <i class="ti-shopping-cart">
           <a href="./cart.html">Cart</a>
@@ -38,37 +58,49 @@
   </div>
 
   <section class="hero-section">
-    
+
   </section>
 
   <div class="shop-section">
     <div class="shop-images">
+      <!-- Trang 1 -->
       <div class="shop-link">
-        <h3></h3>
-        <img src="./asset/css/img/bacxiu.jpg" alt="card">
-        <h4>Bạc xỉu</h4>
-        <a href="./cart.html">Shop now</a>
-      </div>
-      <div class="shop-link">
-        <h3></h3>
-        <img src="./asset/css/img/capheden.jpg" alt="card">
-        <h4>Cà phê đen</h4>
-        <a href="./cart.html">Shop now</a>
-      </div>
-      <div class="shop-link">
-        <h3></h3>
-        <img src="./asset/css/img/caphesua.jpg" alt="card">
-        <h4>Cà phê sữa</h4>
-        <a href="./cart.html">Shop now</a>
-      </div>
-      <div class="shop-link">
-        <h3></h3>
-        <img src="./asset/css/img/caphesua.jpg" alt="card">
-        <h4>Cà phê sữa</h4>
-        <a href="./cart.html">Shop now</a>
-      </div>
-    <!-- phindi -->
-      <div class="shop-link">
+        <div class="product-info">
+            <img src="./asset/css/img/bacxiu.jpg" alt="card">
+            <h4>Bạc Xỉu</h4>
+            <h5>$3.79</h5>
+            <a href="./cart.html">Shop now</a>
+        </div>
+    </div>
+
+    <div class="shop-link">
+        <div class="product-info">
+            <img src="./asset/css/img/capheden.jpg" alt="card">
+            <h4>Cà Phê Đen</h4>
+            <h5>$3.99</h5>
+            <a href="./cart.html">Shop now</a>
+        </div>
+    </div>
+
+    <div class="shop-link">
+        <div class="product-info">
+            <img src="./asset/css/img/caphesua.jpg" alt="card">
+            <h4>Cà Phê Sữa</h4>
+            <h5>$4.49</h5>
+            <a href="./cart.html">Shop now</a>
+        </div>
+    </div>
+
+    <div class="shop-link">
+        <div class="product-info">
+            <img src="./asset/css/img/capheden.jpg" alt="card">
+            <h4>Cà Phê</h4>
+            <h5>$4.00</h5>
+            <a href="./cart.html">Shop now</a>
+        </div>
+    </div>
+      <!-- phindi -->
+      <!-- <div class="shop-link">
         <h3></h3>
         <img src="./asset/css/img/PDkemsua.jpg" alt="card">
         <h4>PhinDi Kem Sữa</h4>
@@ -91,9 +123,9 @@
         <img src="./asset/css/img/PDchoco1.jpg" alt="card">
         <h4>PhinDi Choco</h4>
         <a href="./cart.html">Shop now</a>
-      </div>
+      </div> -->
       <!-- tra -->
-      <div class="shop-link">
+      <!-- <div class="shop-link">
         <h3></h3>
         <img src="./asset/css/img/traxanh.jpg" alt="card">
         <h4>Trà xanh</h4>
@@ -102,32 +134,67 @@
       <div class="shop-link">
         <h3></h3>
         <img src="./asset/css/img/tradao.jpg" alt="card">
-        <h4>Trà Đào</h4>
+        <h4>Trà xanh</h4>
         <a href="./cart.html">Shop now</a>
       </div>
       <div class="shop-link">
         <h3></h3>
         <img src="./asset/css/img/tralasen.jpg" alt="card">
-        <h4>Trà Hạt Sen</h4>
+        <h4>Trà xanh</h4>
         <a href="./cart.html">Shop now</a>
       </div>
       <div class="shop-link">
         <h3></h3>
         <img src="./asset/css/img/tralasen.jpg" alt="card">
-        <h4>Trà Hạt Sen</h4>
+        <h4>Trà xanh</h4>
         <a href="./cart.html">Shop now</a>
-      </div>
-      </div>
+      </div> -->
     </div>
   </div>
-  <div class="pagination">
-    <a href="#" class="prev">&laquo; </a>
-    <a href="#" class="page active">1</a>
-    <a href="#" class="page">2</a>
-    <a href="#" class="page">3</a>
-    <a href="#" class="page">4</a>
-    <a href="#" class="next"> &raquo;</a>
   </div>
+  <div class="pagination">
+    <a href="./index3.html" class="prev">&laquo; </a>
+    <a href="./index2.html" class="page active">1</a>
+    <a href="./index2.html" class="page">2</a>
+    <a href="./index3.html" class="page">3</a>
+    <a href="./index2.html" class="next"> &raquo;</a>
+  </div>
+   <!-- Phần About Us -->
+<!-- Thay đổi HTML -->
+<div class="contact-and-about">
+  <div class="about-us">
+    <h3>About Us</h3>
+    <div class="about-content">
+      <p>
+        Chào mừng bạn đến với Hai-Len Coffee, địa điểm lựa chọn hàng đầu cho cà phê chất lượng cao và đồ uống thơm ngon.
+      Đam mê của chúng tôi đối với cà phê được phản ánh trong mỗi tách chúng tôi phục vụ, và chúng tôi tự hào về việc chọn lọc những hạt cà phê tốt nhất
+      và tạo ra các hỗn hợp độc đáo.
+      </p>
+      <p>
+        Tại Hai-Len Coffee, chúng tôi tin rằng việc tạo ra một không gian ấm cúng và hấp dẫn cho những người yêu cà phê. Cho dù bạn là người hâm mộ
+      của cà phê đen đậm, lattes mềm mại, hay trà độc đáo, menu của chúng tôi đều có một cái gì đó dành cho mọi người.
+      </p>
+      <p>
+        Chúng tôi cam kết mang lại cho bạn trải nghiệm cà phê tuyệt vời nhất và hân hạnh được phục vụ bạn mỗi ngày.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="./asset/css/img/hero1.jpg" alt="About Us Image">
+    </div>
+  </div>
+
+  <div class="contact-us">
+    <h3>Contact Us</h3>
+    <div class="phone-numbers">
+      <div class="phone-number">123-456-7890</div>
+      <div class="phone-number">987-654-3210</div>
+      <div class="phone-number">555-123-4567</div>
+      <div class="phone-number">321-987-6543</div>
+    </div>
+  </div>
+</div>
+
+
   <footer>
     <a href="#" class="footer-title">
       Back to top
@@ -150,6 +217,7 @@
           <a href="mailto:customerservice@highlandscoffee.com.vn">customerservice@coffee.com.vn</a>
         </div>
       </div>
+      
     </div>
   </footer>
 
