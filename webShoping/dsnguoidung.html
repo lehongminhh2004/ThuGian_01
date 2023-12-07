@@ -79,6 +79,7 @@
       <div class="action-buttons">
         <button onclick="lockUser(this)">Khóa</button>
         <button onclick="confirmDeleteUser(this)">Xóa</button>
+        <button onclick="unlockUser(this)">Gỡ Khóa</button>
       </div>
     </div>
     <div class="user">
@@ -87,6 +88,7 @@
       <div class="action-buttons">
         <button onclick="lockUser(this)">Khóa</button>
         <button onclick="confirmDeleteUser(this)">Xóa</button>
+        <button onclick="unlockUser(this)">Gỡ Khóa</button>
       </div>
     </div>
     <!-- Thêm người dùng 3 đến 20 -->
@@ -105,6 +107,12 @@
       var user = button.closest('.user');
       user.classList.add('locked');
       showMessage(user, 'Đã khóa người dùng', 'success');
+    }
+
+    function unlockUser(button) {
+      var user = button.closest('.user');
+      user.classList.remove('locked');
+      showMessage(user, 'Đã gỡ khóa người dùng', 'success');
     }
 
     function confirmDeleteUser(button) {
@@ -153,8 +161,13 @@
       deleteButton.textContent = 'Xóa';
       deleteButton.onclick = function() { confirmDeleteUser(this); };
 
+      var unlockButton = document.createElement('button');
+      unlockButton.textContent = 'Gỡ Khóa';
+      unlockButton.onclick = function() { unlockUser(this); };
+
       actionButtons.appendChild(lockButton);
       actionButtons.appendChild(deleteButton);
+      actionButtons.appendChild(unlockButton);
 
       userElement.appendChild(h2);
       userElement.appendChild(p);
