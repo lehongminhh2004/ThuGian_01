@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/new.css">
+</head>
+<body>
+    <div class="container">
+            <!-- ================ LÀM QUẢN LÝ SẢN PHẨM Ở ĐÂY ================= -->
+            <div class="addproduct">
+                <h1>------------------------------------------------- Thêm sản phẩm mới ----------------------------------------------</h1>
+                <form id="suaUserForm">
+                    <div class="form-group">
+                        <label for="goi">Danh mục:</label>
+                        <select id="goi" name="goi">
+                            <option>Coffee</option>
+                            <option>Tea</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="image1">Ảnh 1:</label>
+                        <input type="file" id="image1" accept="image/*">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="image1">Ảnh 2:</label>
+                        <input type="file" id="image2" accept="image/*">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="image1">Ảnh 3:</label>
+                        <input type="file" id="image3" accept="image/*">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Mã sản phẩm:</label>
+                        <input type="text" id="name" placeholder="AAAA">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Tên sản phẩm:</label>
+                        <input type="text" id="name" placeholder="Bạc xỉu">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Giá:</label>
+                        <input type="text" id="email" placeholder="15.000đ">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Mô tả:</label>
+                        <input type="text" id="name" placeholder="Đích thực là ly cà phê espresso ngon đậm đà!">
+                    </div>
+                    <div class="form-group">
+                        <label for="quatyti">Số lượng tồn kho:</label>
+                        <input type="text" id="quatyti" placeholder="1000">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Lưu vào Database" onclick="myFunction()">
+                        <button class="return"><a href="../html/quanlysanpham.html">Quay lại</a></button>
+                    </div>
+                </form>
+                <script>
+                    function myFunction() {
+                        alert("Đã lưu thành công thông tin sản phẩm mới vào Database!");
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
