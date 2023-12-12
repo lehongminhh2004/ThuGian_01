@@ -83,7 +83,7 @@ i {
 /* Hero Section */
 .hero-section {
   height: 400px;
-  background-image: url("/coffee/asset/css/img/pexels-dmitry-zvolskiy-2199190.jpg");
+  background-image: url("./img/pexels-dmitry-zvolskiy-2199190.jpg");
   background-position: center;
   background-size: cover;
 }
