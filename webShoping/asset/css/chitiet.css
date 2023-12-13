@@ -291,6 +291,7 @@ i {
     text-align: center;
     width: 48%; /* Điều chỉnh độ rộng của sản phẩm đề xuất */
     margin: 0; /* Đặt margin về 0 để giảm khoảng trắng giữa các sản phẩm */
+    padding: 15px;
   }
   
   .suggested-product img {
