@@ -59,10 +59,10 @@
   min-width: 60px;
   text-align: center;
   font-size: 18px;
-  color: #fff;
+  color: #000000;
 }
 .sidebar .nav-links li a .links_name{
-  color: #fff;
+  color: #000000;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;

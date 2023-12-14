@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,9 +65,21 @@
     .error {
       color: red;
     }
-    
+
+    .user-list {
+      max-width: 800px;
+      /* Adjust this value as needed */
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
 
   <header>
@@ -93,7 +106,7 @@
         <button onclick="unlockUser(this)">Gỡ Khóa</button>
       </div>
     </div>
-    
+
     <!-- Thêm người dùng 3 đến 20 -->
     <!-- Copy và dán đoạn mã trên để thêm người dùng khác -->
 
@@ -108,14 +121,20 @@
 
     function lockUser(button) {
       var user = button.closest('.user');
-      user.classList.add('locked');
-      showMessage(user, 'Đã khóa người dùng', 'success');
+      var isConfirmed = confirm('Bạn có chắc muốn khóa người dùng này?');
+      if (isConfirmed) {
+        user.classList.add('locked');
+        showMessage(user, 'Đã khóa người dùng', 'success');
+      }
     }
 
     function unlockUser(button) {
       var user = button.closest('.user');
-      user.classList.remove('locked');
-      showMessage(user, 'Đã gỡ khóa người dùng', 'success');
+      var isConfirmed = confirm('Bạn có chắc muốn gỡ khóa người dùng này?');
+      if (isConfirmed) {
+        user.classList.remove('locked');
+        showMessage(user, 'Đã gỡ khóa người dùng', 'success');
+      }
     }
 
     function confirmDeleteUser(button) {
@@ -130,7 +149,6 @@
       user.remove();
       showMessage(user, 'Đã xóa người dùng', 'success');
     }
-
     function showMessage(element, message, className) {
       var messageElement = document.createElement('p');
       messageElement.textContent = message;
@@ -158,15 +176,15 @@
 
       var lockButton = document.createElement('button');
       lockButton.textContent = 'Khóa';
-      lockButton.onclick = function() { lockUser(this); };
+      lockButton.onclick = function () { lockUser(this); };
 
       var deleteButton = document.createElement('button');
       deleteButton.textContent = 'Xóa';
-      deleteButton.onclick = function() { confirmDeleteUser(this); };
+      deleteButton.onclick = function () { confirmDeleteUser(this); };
 
       var unlockButton = document.createElement('button');
       unlockButton.textContent = 'Gỡ Khóa';
-      unlockButton.onclick = function() { unlockUser(this); };
+      unlockButton.onclick = function () { unlockUser(this); };
 
       actionButtons.appendChild(lockButton);
       actionButtons.appendChild(deleteButton);
@@ -179,11 +197,41 @@
       userContainer.appendChild(userElement);
     }
   </script>
-<div class="user butt">
-      
-  <div class="action-buttons">
-    <button>quay veef</button>
+
+
+  <!--  -->
+  <div id="registration-chart-section">
+    <canvas id="registration-chart" width="400" height="200"></canvas>
   </div>
-</div>
+
+  <!-- Script for registration chart -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctxRegistration = document.getElementById('registration-chart').getContext('2d');
+      var registrationChart = new Chart(ctxRegistration, {
+        type: 'bar',
+        data: {
+          labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+          datasets: [
+            {
+              label: 'Số người đăng ký',
+              data: [120, 150, 180, 200, 220, 250, 280, 300, 270, 230, 200, 180],
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+            },
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
