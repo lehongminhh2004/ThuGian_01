@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quản lý đơn hàng</title>
-  <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -30,8 +29,6 @@
       border: 1px solid #000;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
-      
     }
 
     #revenue-section {
@@ -43,6 +40,280 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
   </style>
+  <style>
+    .banner{
+    margin: 20px;
+      display: flex;
+      background-color: black;
+      justify-content: space-between;
+      padding: 10px;
+  }
+  #month, #find, #chon{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  #customDate {
+    position: fixed;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin-left: 375px;
+    margin-top: 40px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+}
+
+#customDate label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+#customDate input[type="date"],
+#customDate input[type="submit"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+  option:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  option:hover {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  option:checked {
+    background-color: #3498db;
+    color: #fff;
+  }
+  .chartsBx{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .chartsBx .chart{
+    position: relative;
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 48%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    border: 1px solid var(--blue);
+  }
+  .order-table {
+    position: relative;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  }
+  .order-table{
+    padding: 30px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+  }
+  table thead td {
+    font-weight: 600;
+    background-color: black;
+    color: #fff;
+  }
+  .order-table table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(146, 100, 100, 0.1);
+    font-weight: lighter;
+  }
+  .order-table table tbody tr:hover {
+    background-color: #9c9595;
+    color: var(--white);
+  }
+  .order-table table tr td {
+    padding: 10px;
+    text-align: center;
+  }
+  #xoanguoidung{
+    padding: 4px;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  border-color: red;
+  }
+  #suanguoidung{
+    padding: 4px;
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+  border-color: green;
+  }
+ 
+  .pagination {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+    font-weight: lighter;
+  }
+  
+  .pagination li {
+    padding: 20px;
+    display: inline-block;
+    margin: 20px 10px;
+    cursor: pointer;
+  }
+  
+  .pagination .hientai {
+    border-bottom: 3px solid rgb(0, 0, 0);
+  }
+  
+  .pagination li:not(.hientai):hover {
+    background-color: rgb(152, 50, 50);
+    border-radius: 10px;
+  }
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      /* Thêm dòng này để đặt màu nền trắng */
+    }
+
+
+    #left-menu {
+      float: left;
+      width: 20%;
+      background-color: #fff;
+      /* Đặt màu nền trắng */
+      padding: 20px;
+      height: 120vh;
+    }
+
+    #left-menu table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #left-menu td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      /* Đường viền phân chia giữa các hàng */
+    }
+
+
+
+    #left-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #fff;
+      /* Màu nâu cà phê */
+    }
+
+    #left-menu ul ul {
+      margin-left: 20px;
+      background-color: #fff;
+      /* Màu nâu cà phê */
+    }
+
+
+    #left-menu ul li {
+      margin-bottom: 10px;
+    }
+
+    #left-menu a {
+      text-decoration: none;
+      color: #000;
+      /* Màu chữ trắng */
+      font-weight: bold;
+      display: block;
+    }
+
+    #left-menu ul ul li {
+      margin-bottom: 5px;
+      background-color: #fff;
+      /* Màu nâu cà phê */
+    }
+
+
+
+    #main-content {
+      margin-left: 20%;
+      padding: 20px;
+    }
+
+    .shop-images {
+      display: flex;
+      flex-wrap: wrap;
+    }
+/* 13/12 */
+    .shop-link {
+      width: 25%;
+      padding: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px solid #ccc; /* Thêm đường viền */
+      border-radius: 10px; /* Thêm bo tròn */
+      margin: 10px; /* Thêm khoảng cách giữa các phần */
+    }
+
+    .shop-link a {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #6d342d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .shop-link img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px; /* Bo tròn cả ảnh */
+    }
+/* 13/12 */
+    .shop-description {
+      text-align: left;
+    }
+
+    .pagination {
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+    }
+    table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+</style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -57,11 +328,110 @@
   <a href="./don1.html" class="order-link">Đơn hàng 4</a>
   <a href="./don1.html" class="order-link">Đơn hàng 5</a>
   <a href="./don1.html" class="order-link">Đơn hàng 6</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 1</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 2</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 3</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 4</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 5</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 6</a>
+  <!-- Thêm các đường liên kết cho các đơn hàng khác nếu cần -->
+  <div class="banner">
+    <select id="month">
+        <option>Tháng 12</option>
+        <option>Tháng 1</option>
+        <option>Tháng 2</option>
+        <option>Tháng 3</option>
+        <option>Tháng 4</option>
+        <option>Tháng 5</option>
+        <option>Tháng 6</option>
+        <option>Tháng 7</option>
+        <option>Tháng 8</option>
+        <option>Tháng 9</option>
+        <option>Tháng 10</option>
+        <option>Tháng 11</option>
+    </select>
+    <select id="month">
+        <option>Tình trạng</option>
+        <option>Chờ xác nhận</option>
+        <option>Đã giao</option>
+        <option>Đang giao</option>
+        <option>Bị hủy</option>
+    </select>
+    <select id="chon" onchange="showCustomDate()">
+        <option value="today">Hôm nay</option>
+        <option value="yesterday">Hôm qua</option>
+        <option value="last7days">7 ngày trước</option>
+        <option value="last30days">30 ngày trước</option>
+        <option value="custom">Tùy chọn</option>
+    </select>
+
+    <div id="customDate" style="display: none;">
+        <label for="fromDate">Từ ngày:</label>
+        <input type="date" id="fromDate">
+        <label for="toDate">Đến ngày:</label>
+        <input type="date" id="toDate">
+        <label><input onclick="gui()" type="submit"></label>
+    </div>
+
+    <script>
+        function showCustomDate() {
+            const select = document.getElementById('chon');
+            const customDate = document.getElementById('customDate');
+
+            if (select.value === 'custom') {
+                customDate.style.display = 'block';
+            } else {
+                customDate.style.display = 'none';
+            }
+        }
+
+        function gui() {
+            const fromDate = document.getElementById('fromDate').value;
+            const toDate = document.getElementById('toDate').value;
+            const customDate = document.getElementById('customDate');
+
+            if (fromDate !== '' && toDate !== '') {
+                alert(`Đã cập nhật các đơn hàng từ ${fromDate} đến ${toDate}`);
+                customDate.style.display = 'none'; // Ẩn box khi nhấn OK trên alert
+            } else {
+                alert("Vui lòng nhập đầy đủ thông tin ngày");
+            }
+        }
+    </script>
+
+    <div class="finder">
+        <select id="find">
+            <option>Tìm theo doanh thu</option>
+            <option>Tìm theo sản phẩm</option>
+        </select>
+        <input id="find" type="text" placeholder="Nhập thông tin cần tìm">
+    </div>
+</div>
+
+  <div id="revenue-section">
+    <canvas id="revenue-chart" width="400" height="200"></canvas>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctx = document.getElementById('revenue-chart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+          datasets: [{
+            label: 'Doanh thu',
+            data: [1000, 1200, 800, 500, 777, 430, 870, 670, 980, 1150, 1040, 800 /* Thêm doanh thu cho từng tháng */],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  </script>m
+
 </body>
 </html>
