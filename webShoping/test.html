@@ -4,143 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/test.css">
+    <title>Coffee Store</title>
+    <link rel="stylesheet" href="./asset/css/chitiet.css">
+    <link rel="stylesheet" href="./asset/css/themsp.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 
 <body>
-    <tr>
-        <td>1</td>
-        <td>KNS49</td>
-        <td><img src="../img/product/Kỹ năng sống - Phát triển cá nhân/Đắc Nhân Tâm 1.jpg" alt="">
-        </td>
-        <td>Đắc nhân tâm</td>
-        <td>KNS-PTCN</td>
-        <td>200.000đ</td>
-        <td>1000</td>
-        <td>29/7/2023 11:11 </td>
-        <td>
-            <button id="suanguoidung">Sửa</button>
-            <button onclick="myFunction()" id="xoanguoidung">Xóa</button>
+    <div id="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a class="logo" href="#">COFFEE<span>.</span></a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Search" class="search-input">
+                <div class="search-icon">
+                    <a href="./indextim2.html"><span class="material-symbols-outlined">search</span></a>
+                    <!-- <span class="material-symbols-outlined">search</span> -->
+                </div>
+            </div>
+            <div class="sign-in">
+                <i class="ti-user">
+                    <a href="./loginUser.html">user</a>
+                </i>
+            </div>
+            <div class="cart">
+                <i class="ti-shopping-cart">
+                    <a href="./loginUser.html">Cart</a>
+                </i>
+            </div>
+        </nav>
+    </div>
+
+    <section class="hero-section">
+
+    </section>
+
+    <div class="shop-section">
+        <div class="shop-images">
+            <img src="./asset/css/img/bacxiu.jpg" alt="Bạc Xỉu">
+        </div>
+        <div class="shop-description">
+            <h3>Bạc Xỉu</h3>
+            <h4>Giá: $4.99</h4>
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
+            <p>
+                Một hòa quyện hoàn hảo giữa cà phê Robusta mạnh mẽ và sữa đặc đường, Bạc Xỉu mang đến trải nghiệm cà phê
+                độc đáo với vị đắng ngọt đặc trưng.
+            </p>
+            <!-- <a href="./loginUser.html" class="add-to-cart-btn">Thêm vào giỏ hàng</a> -->
+            <!-- <a href="./loginUser.html" class="add-to-cart-btn">Thêm vào giỏ hàng</a> -->
+        </div>
+    </div>
+    <!-- Tiếp tục từ phần trước của mã HTML -->
+
+    
+
+    <!-- Kết thúc của mã HTML -->
+    <div class="container">
+        <!-- ================ LÀM QUẢN LÝ SẢN PHẨM Ở ĐÂY ================= -->
+        <div class="addproduct">
+            <h1>------------------------------------------------- Sửa sản phẩm
+                ----------------------------------------------</h1>
+            <form id="suaUserForm">
+                <div class="form-group">
+                    <label for="goi">Danh mục:</label>
+                    <select id="goi" name="goi">
+                        <option>Coffee</option>
+                        <option>Tea</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="image1">Ảnh 1:</label>
+                    <input type="file" id="image1" accept="image/*">
+
+                </div>
+                <div class="form-group">
+                    <label for="image1">Ảnh 2:</label>
+                    <input type="file" id="image2" accept="image/*">
+
+                </div>
+                <div class="form-group">
+                    <label for="image1">Ảnh 3:</label>
+                    <input type="file" id="image3" accept="image/*">
+
+                </div>
+                <div class="form-group">
+                    <label for="name">Mã sản phẩm:</label>
+                    <input type="text" id="name" placeholder="AAAA">
+                </div>
+                <div class="form-group">
+                    <label for="name">Tên sản phẩm:</label>
+                    <input type="text" id="name" placeholder="Bạc xỉu">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Giá:</label>
+                    <input type="text" id="email" placeholder="15.000đ">
+                </div>
+                <div class="form-group">
+                    <label for="name">Mô tả:</label>
+                    <input type="text" id="name" placeholder="Đích thực là ly cà phê espresso ngon đậm đà!">
+                </div>
+                <div class="form-group">
+                    <label for="quatyti">Số lượng tồn kho:</label>
+                    <input type="text" id="quatyti" placeholder="1000">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Lưu vào Database" onclick="myFunction()">
+                    <button class="return"><a href="./indexAdmin.html">Quay lại</a></button>
+                </div>
+            </form>
             <script>
                 function myFunction() {
-                    const confirmation = confirm("Bạn có chắc chắn xóa Đắc Nhân Tâm không?");
-                    if (confirmation) {
-                        alert("Đã xóa sản phẩm thành công!");
-
-                    }
+                    alert("Đã lưu thành công thông tin sản phẩm mới vào Database!");
                 }
             </script>
 
-        </td>
-    </tr>
-    <div class="boxsuauser" id="boxsuauser">
-
-        <button onclick="dongFormChinhSua()">X</button>
-        <script>
-            function dongFormChinhSua() {
-                var boxSuaUser = document.getElementById('boxsuauser');
-                boxSuaUser.style.display = 'none';
-            }
-        </script>
-        <h2 style="margin-bottom: 10px;">Sửa thông tin sản phẩm </h2>
-        <form id="suaUserForm">
-            <div class="form-group">
-                <label for="image1">Ảnh 1:</label>
-                <div class="change_img">
-                    <img src="../img/product/Kỹ năng sống - Phát triển cá nhân/Đắc Nhân Tâm 1.jpg" alt="laptop"
-                        class="product_pic">
-                    <div class="change_action">
-                        <label for="input_file" class="change_button">Sửa</label>
-                        <input type="file" class="input_file" accept="image/*">
-                        <label class="change_button" onclick="del(this)">Xóa</label>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="image1">Ảnh 2:</label>
-                <div class="change_img">
-                    <img src="../img/product/Kỹ năng sống - Phát triển cá nhân/Đắc Nhân Tâm 1.jpg" alt="laptop"
-                        class="product_pic">
-                    <div class="change_action">
-                        <label for="input_file" class="change_button">Sửa</label>
-                        <input type="file" class="input_file" accept="image/*">
-                        <label class="change_button" onclick="del(this)">Xóa</label>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="image1">Ảnh 3:</label>
-                <div class="change_img">
-                    <img src="../img/product/Kỹ năng sống - Phát triển cá nhân/Đắc Nhân Tâm 1.jpg" alt="laptop"
-                        class="product_pic">
-                    <div class="change_action">
-                        <label for="input_file" class="change_button">Sửa</label>
-                        <input type="file" class="input_file" accept="image/*">
-                        <label class="change_button" onclick="del(this)">Xóa</label>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <label for="email">Mã sản phẩm:</label>
-                <input type="text" id="email" value="KNS49">
-            </div>
-            <div class="form-group">
-                <label for="name">Tên sản phẩm:</label>
-                <input type="text" id="name" value="Đắc Nhân Tâm">
-            </div>
-
-            <div class="form-group">
-                <label for="email">Giá:</label>
-                <input type="text" id="email" value="77.400 đ">
-            </div>
-            <div class="form-group">
-                <label for="email">Tác giả:</label>
-                <input type="text" id="email" value="Dale Carnegie">
-            </div>
-            <div class="form-group">
-                <label for="email">Nhà xuất bản:</label>
-                <input type="text" id="email" value="Văn Học">
-            </div>
-            <div class="form-group">
-                <label for="description">Mô tả:</label>
-                <textarea
-                    id="description">Đắc nhân tâm của Dale Carnegie là quyển sách của mọi thời đại và một hiện tượng đáng kinh ngạc trong ngành xuất bản Hoa Kỳ. Chiếm vị trí số một trong danh mục sách bán chạy nhất và trở thành một sự kiện có một không hai trong lịch sử ngành xuất bản thế giới và được đánh giá là một quyển sách có tầm ảnh hưởng nhất mọi thời đại.</textarea>
-            </div>
-            <div class="form-group">
-                <label for="quatyti">Số lượng tồn kho:</label>
-                <input type="text" id="quatyti" value="1000">
-            </div>
-            <div class="form-group">
-                <label for="goi">Danh mục:</label>
-                <select id="goi" name="goi">
-                    <option>Kỹ năng sống - Phát triển cá nhân</option>
-                    <option>Manga-Comic</option>
-                    <option>Nghệ thuật-Văn hóa</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <div class="update">
-                    <a onclick="warning()"><i class="fa-solid fa-download"></i>Cập nhật</a>
-                </div>
-
-            </div>
-
-        </form>
+        </div>
     </div>
-    <script src="../js/suasanpham.js"></script>
-    <!-- ======= Charts JS ====== -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="../js/chartsachbanchay.js"></script>
+    </div>
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Kết thúc của mã HTML -->
+
+    <footer>
+        <div id="footer">
+            <div id="row">
+                <div class="footerSocial">
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-facebook"></i>
+                    </a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-instagram"></i>
+                    </a>
+                </div>
+                <div class="footerCopy">
+                    <p>© 2004 Coffee. All rights reserved.</p>
+                </div>
+                <div class="footerMail">
+                    <i class="ti-email"></i>
+                    <a href="mailto:customerservice@coffee.com.vn">customerservice@coffee.com.vn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
