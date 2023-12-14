@@ -30,6 +30,8 @@
       border: 1px solid #000;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      
     }
 
     #revenue-section {
@@ -55,38 +57,11 @@
   <a href="./don1.html" class="order-link">Đơn hàng 4</a>
   <a href="./don1.html" class="order-link">Đơn hàng 5</a>
   <a href="./don1.html" class="order-link">Đơn hàng 6</a>
-  <!-- Thêm các đường liên kết cho các đơn hàng khác nếu cần -->
-
-  <div id="revenue-section">
-    <canvas id="revenue-chart" width="400" height="200"></canvas>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var ctx = document.getElementById('revenue-chart').getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
-          datasets: [{
-            label: 'Doanh thu',
-            data: [1000, 1200, 800, 500, 777, 430, 870, 670, 980, 1150, 1040, 800 /* Thêm doanh thu cho từng tháng */],
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
-    });
-  </script>m
-
+  <a href="./don1.html" class="order-link">Đơn hàng 1</a>
+  <a href="./don1.html" class="order-link">Đơn hàng 2</a>
+  <a href="./don1.html" class="order-link">Đơn hàng 3</a>
+  <a href="./don1.html" class="order-link">Đơn hàng 4</a>
+  <a href="./don1.html" class="order-link">Đơn hàng 5</a>
+  <a href="./don1.html" class="order-link">Đơn hàng 6</a>
 </body>
 </html>
