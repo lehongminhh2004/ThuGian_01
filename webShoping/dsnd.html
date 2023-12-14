@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal | www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>COFFEE</title>
+    <link rel="stylesheet" href="./asset/css/admin.css">
+    <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6d342d;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .order-link {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #revenue-section {
+            margin: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+    
+        
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        
+    
+    
+        .user-list {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .user {
+          border-bottom: 1px solid #ddd;
+          padding: 10px;
+          position: relative;
+        }
+    
+        .user:last-child {
+          border-bottom: none;
+        }
+    
+        h2 {
+          color: #333;
+        }
+    
+        .action-buttons {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          display: flex;
+          gap: 10px;
+        }
+    
+        button {
+          padding: 5px 10px;
+          cursor: pointer;
+        }
+    
+        .success {
+          color: green;
+        }
+    
+        .error {
+          color: red;
+        }
+    
+        .user-list {
+          max-width: 800px;
+          /* Adjust this value as needed */
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      </style>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='ti-package'></i>
+            <span class="logo_name">Coffee</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="active">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Bảng điều khiển</span>
+                </a>
+            </li>
+            <li>
+                <a href="./indexAdmin.html">
+                    <i class='bx bx-box'></i>
+                    <span class="links_name">Sản phẩm</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Danh sách người dùng</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="links_name">Danh sách đơn hàng</span>
+                </a>
+            </li>
+
+            <li class="log_out">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Đăng xuất</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav class="nnn">
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Bảng điều khiển</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="./asset/css/img/pexels-dmitry-zvolskiy-2199190.jpg" alt="">
+                <span class="admin_name">LeMinh</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+
+        <div class="home-content">
+            
+            
+              <div class="user-list">
+                <!-- Thêm 20 người dùng -->
+                <div class="user">
+                  <h2>Tấn Phước</h2>
+                  <p>Email: tanphuoc@example.com</p>
+                  <div class="action-buttons">
+                    <button onclick="lockUser(this)">Khóa</button>
+                    <button onclick="confirmDeleteUser(this)">Xóa</button>
+                    <button onclick="unlockUser(this)">Gỡ Khóa</button>
+                  </div>
+                </div>
+                <div class="user">
+                  <h2>Quốc An</h2>
+                  <p>Email: quocan@example.com</p>
+                  <div class="action-buttons">
+                    <button onclick="lockUser(this)">Khóa</button>
+                    <button onclick="confirmDeleteUser(this)">Xóa</button>
+                    <button onclick="unlockUser(this)">Gỡ Khóa</button>
+                  </div>
+                </div>
+            
+                <!-- Thêm người dùng 3 đến 20 -->
+                <!-- Copy và dán đoạn mã trên để thêm người dùng khác -->
+            
+              </div>
+            
+              <script>
+                var userNames = [
+                  "Tiến Đạt", "Nhật Huy", "Lâm Thành", "Tuấn Phát", "Văn Tài",
+                  "Thái Hiển", "Minh Hào", "Tuấn Khanh", "Nguyễn Vương", "Thanh Danh",
+                  "Quang Huy"
+                ];
+            
+                function lockUser(button) {
+                  var user = button.closest('.user');
+                  var isConfirmed = confirm('Bạn có chắc muốn khóa người dùng này?');
+                  if (isConfirmed) {
+                    user.classList.add('locked');
+                    showMessage(user, 'Đã khóa người dùng', 'success');
+                  }
+                }
+            
+                function unlockUser(button) {
+                  var user = button.closest('.user');
+                  var isConfirmed = confirm('Bạn có chắc muốn gỡ khóa người dùng này?');
+                  if (isConfirmed) {
+                    user.classList.remove('locked');
+                    showMessage(user, 'Đã gỡ khóa người dùng', 'success');
+                  }
+                }
+            
+                function confirmDeleteUser(button) {
+                  var user = button.closest('.user');
+                  var isConfirmed = confirm('Bạn có chắc muốn xóa người dùng này?');
+                  if (isConfirmed) {
+                    deleteUser(user);
+                  }
+                }
+            
+                function deleteUser(user) {
+                  user.remove();
+                  showMessage(user, 'Đã xóa người dùng', 'success');
+                }
+                function showMessage(element, message, className) {
+                  var messageElement = document.createElement('p');
+                  messageElement.textContent = message;
+                  messageElement.classList.add(className);
+                  element.appendChild(messageElement);
+                  setTimeout(function () {
+                    messageElement.remove();
+                  }, 3000);
+                }
+            
+                // Thêm người dùng 3 đến 20 vào danh sách
+                for (var i = 3; i <= 13; i++) {
+                  var userContainer = document.querySelector('.user-list');
+                  var userElement = document.createElement('div');
+                  userElement.classList.add('user');
+            
+                  var h2 = document.createElement('h2');
+                  h2.textContent = userNames[i - 3];
+            
+                  var p = document.createElement('p');
+                  p.textContent = 'Email: user' + i + '@example.com';
+            
+                  var actionButtons = document.createElement('div');
+                  actionButtons.classList.add('action-buttons');
+            
+                  var lockButton = document.createElement('button');
+                  lockButton.textContent = 'Khóa';
+                  lockButton.onclick = function () { lockUser(this); };
+            
+                  var deleteButton = document.createElement('button');
+                  deleteButton.textContent = 'Xóa';
+                  deleteButton.onclick = function () { confirmDeleteUser(this); };
+            
+                  var unlockButton = document.createElement('button');
+                  unlockButton.textContent = 'Gỡ Khóa';
+                  unlockButton.onclick = function () { unlockUser(this); };
+            
+                  actionButtons.appendChild(lockButton);
+                  actionButtons.appendChild(deleteButton);
+                  actionButtons.appendChild(unlockButton);
+            
+                  userElement.appendChild(h2);
+                  userElement.appendChild(p);
+                  userElement.appendChild(actionButtons);
+            
+                  userContainer.appendChild(userElement);
+                }
+              </script>
+            
+            
+              <!--  -->
+              <div id="registration-chart-section">
+                <canvas id="registration-chart" width="400" height="200"></canvas>
+              </div>
+            
+              <!-- Script for registration chart -->
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  var ctxRegistration = document.getElementById('registration-chart').getContext('2d');
+                  var registrationChart = new Chart(ctxRegistration, {
+                    type: 'bar',
+                    data: {
+                      labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+                      datasets: [
+                        {
+                          label: 'Số người đăng ký',
+                          data: [120, 150, 180, 200, 220, 250, 280, 300, 270, 230, 200, 180],
+                          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                          borderColor: 'rgba(54, 162, 235, 1)',
+                          borderWidth: 1
+                        },
+                      ]
+                    },
+                    options: {
+                      scales: {
+                        y: {
+                          beginAtZero: true
+                        }
+                      }
+                    }
+                  });
+                });
+              </script>
+        </div>
+    </section>
+
+   
+
+</body>
+
+</html>
