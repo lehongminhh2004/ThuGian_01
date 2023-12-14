@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng</title>
-    <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="./asset/css/cart.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet"
+  <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
 </head>
@@ -240,26 +240,23 @@
 <body>
     <div id="header">
         <nav class="navbar">
-          <div class="nav-logo">
-            <a class="logo" href="./index2.html">COFFEE<span>.</span></a>
-          </div>
-          <div class="nav-search">
-            <input type="text" placeholder="Search" class="search-input">
-            <div class="search-icon">
-              <a href="./indexTimKiem.html">
-                <span class="material-symbols-outlined">search</span></a>
+            <div class="nav-logo">
+                <a class="logo" href="./index2.html">COFFEE<span>.</span></a>
             </div>
-          </div>
-          <div class="sign-in">
-            <i class="ti-user">
-              <a href="./loginUser.html">Xin chào user123</a>
-            </i>
-          </div>
-          
-          
+            <div class="nav-search">
+                <input type="text" placeholder="Search" class="search-input">
+                <div class="search-icon">
+                    <a href="./indexTimKiem.html"><span class="material-symbols-outlined">search</span></a>
+                    <!-- <span class="material-symbols-outlined">search</span> -->
+                </div>
+            </div>
+            <div class="sign-in">
+                <i class="ti-user">
+                    <a href="./lichsu.html">user</a>
+                </i>
+            </div>
         </nav>
-      </div>
-
+    </div>
     <h1>Chọn sản phẩm để thêm vào giỏ hàng</h1>
 
     <div class="products">
@@ -388,12 +385,10 @@
             <!-- Sản phẩm trong giỏ hàng sẽ được hiển thị ở đây -->
         </ul>
         <p>Tổng tiền: <span id="total-price">$0.00</span></p>
-        <button onclick="checkout()">Thanh toán</button>
+        <a href="./thanhtoan.html"><button>Thanh toán</button></a>
+        <!-- <button>Thanh toán</button> -->
     </div>
-    <!-- <div class="cart">
-        
-        <button>Thanh toán</button>
-    </div> -->
+
     <script src="cart.js"></script>
 </body>
 

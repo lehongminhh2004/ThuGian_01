@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    
+    <link rel="stylesheet" href="./asset/css/thanhtoan.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+</head>
+
+<body>
+    <!--------------------------Bắt đầu Header--------------------------------------------------->
+    <div id="header">
+        <nav class="navbar">
+          <div class="nav-logo">
+            <a class="logo" href="./index2.html">COFFEE<span>.</span></a>
+          </div>
+          <div class="nav-search">
+            <input type="text" placeholder="Search" class="search-input">
+            <div class="search-icon">
+              <a href="./indexTimKiem.html">
+                <span class="material-symbols-outlined">search</span></a>
+            </div>
+          </div>
+          <div class="sign-in">
+            <i class="ti-user">
+              <a href="./lichsu.html">Xin chào user123</a>
+            </i>
+          </div>
+          <div class="sign-in">
+            <i class="ti-shift-right">
+              <a href="./index.html">logout</a>
+            </i>
+          </div>
+          <div class="cart">
+            <i class="ti-shopping-cart">
+              <a href="./cart.html">Cart</a>
+            </i>
+          </div>
+        </nav>
+      </div>
+        <!-----------------------------------Kết thúc Header--------------------------------------------------->
+
+        <div class="left">
+            <h3>ĐỊA CHỈ GIAO HÀNG</h3>
+            
+            <form>
+                Họ và tên người nhận
+                <input type="text" name="" placeholder="Nhập họ và tên người nhận">
+                Email
+                <input type="text" name="" placeholder="Nhập email">
+                Số điện thoại
+                <input type="text" name="" placeholder="Ví dụ: 0934686xxx">
+                Địa chỉ nhận hàng
+                <input type="text" name="" placeholder="Nhập địa chỉ nhận hàng">
+
+            </form>
+        </div>
+        <div class="right">
+            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+            <form>
+                <input type="radio" id="age1" name="age" value="30">
+                <label for="age1">&nbsp;<img id="zalopay" src="./asset/css/img/zalopay.png">&nbsp;&nbsp;ZALO</label><br>
+                <input type="radio" id="age2" name="age" value="60">
+                <label for="age2">&nbsp;<img src="./asset/css/img/momo.jpg">&nbsp;&nbsp;MOMO</label><br>
+                <input type="radio" id="age3" name="age" value="100">
+                <label for="age3">&nbsp;<img src="./asset/css/img/atm.png">&nbsp;&nbsp;ATM</label><br>
+                <input type="radio" id="age4" name="age" value="120">
+                <label for="age3">Thanh toán bằng tiền mặt</label><br>
+            </form>
+        </div>
+        <div class="wrapper1">
+            <h3>KIỂM TRA LẠI ĐƠN HÀNG</h3>
+            <div class="row">
+                <table class="table table-bordered" id="table-products">
+                    <thead>
+                        <tr>
+                            <th>SẢN PHẨM</th>
+                            <th>GIÁ TIỀN</th>
+                            <th>SỐ LƯỢNG</th>
+                            <th>TỔNG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sanpham">
+                                <img src="./asset/css/img/caphesua.jpg">
+                                <p>Cà phê sữa</p>
+                            </td>
+                            <td id="gia1">100.000 đ</td>
+                            <td id="num">2</td>
+                            <td id="xoa">200.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="fixed-buttons-container">
+            <div class="back-to-cart">
+                <a href="../html/lichsumuahang.html">
+                    <span>
+                        <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=10354">
+                    </span>
+                    <span>Xem lịch sử mua hàng</span>
+                </a>
+            </div>
+            <div class="checkout-button" onclick="myFunction()">
+                <input type="submit" name="" value="THANH TOÁN NGAY!!!" class="checkout-btn">
+            </div>
+            <script>
+                function myFunction() {
+                    alert("CẢM ƠN BẠN ĐÃ MUA HÀNG !!!");
+                }
+            </script>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <div id="row">
+                    <div class="footerSocial">
+                        <a href="https://youtu.be/dQw4w9WgXcQ">
+                            <i class="mrb15 ti-facebook"></i>
+                        </a>
+                        <a href="https://youtu.be/dQw4w9WgXcQ">
+                            <i class="mrb15 ti-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="footerCopy">
+                        <p>© 2004 Coffee. All rights reserved.</p>
+                    </div>
+                    <div class="footerMail">
+                        <i class="ti-email"></i>
+                        <a href="mailto:customerservice@coffee.com.vn">customerservice@coffee.com.vn</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
