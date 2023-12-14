@@ -83,7 +83,7 @@ i {
 /* Hero Section */
 .hero-section {
   height: 400px;
-  background-image: url("./img/pexels-dmitry-zvolskiy-2199190.jpg");
+  background-image: url("/coffee/asset/css/img/pexels-dmitry-zvolskiy-2199190.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -112,7 +112,6 @@ i {
   background-color: #fff;
   padding: 30px;
   display: flex;
-  cursor: pointer;
   flex-direction: column;
   white-space: nowrap;
 
@@ -130,6 +129,14 @@ i {
   margin-bottom: 10px;
 }
 
+.shop-link h4 {
+  margin: 10px 0;
+  font-family:'Helvetica', sans-serif; /* Thay 'Arial' bằng font mong muốn */
+  font-size: 18px;
+  font-weight: lighter;
+  color: #000; /* Màu chữ */
+}
+
 .shop-link a {
   display: inline-block;
   margin-top: 10px;
@@ -139,10 +146,6 @@ i {
   transition: color 0.3s ease;
 }
 
-.shop-link:hover a {
-  color: #c7511f;
-  text-decoration: underline;
-}
 
 /* pagination */
 .pagination {
@@ -237,3 +240,69 @@ i {
   width: 40%;
   align-items: center;
 }
+
+
+/* Thêm vào phần style của bạn */
+#left-menu input[type="checkbox"] {
+  margin-right: 5px; /* Khoảng cách giữa checkbox và văn bản */
+}
+
+#left-menu label {
+  display: flex;
+  align-items: center;
+}
+
+/* Thêm đoạn CSS sau vào phần style của bạn */
+
+/* Hiệu ứng khi hover và khi được chọn cho checkbox */
+#left-menu input[type="checkbox"]:hover,
+#left-menu input[type="checkbox"]:checked {
+  transform: scale(1.2); /* Tăng kích thước khi hover hoặc được chọn */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+/* Thay đổi màu chữ khi checkbox được chọn */
+#left-menu input[type="checkbox"]:checked + a {
+  color: #6d342d;/
+}
+
+#left-menu a.browse-button {
+  display: block;
+  padding: 10px;
+  border: 2px solid #6d342d; /* Màu khung */
+  color: #6d342d; /* Màu chữ */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#left-menu a.browse-button:hover {
+  background-color: #6d342d; /* Màu nền khi hover */
+  color: #fff; /* Màu chữ khi hover */
+}
+
+#left-menu {
+  font-family: 'Helvetica', sans-serif; /* Thay thế 'Helvetica' bằng font chữ mong muốn */
+  font-size: 16px; /* Cỡ chữ chính */
+  line-height: 1.5; /* Khoảng cách giữa các dòng */
+}
+
+#left-menu a {
+  font-family: 'Helvetica', sans-serif; /* Thay thế 'Helvetica' bằng font chữ mong muốn */
+  font-size: 14px; /* Cỡ chữ cho các liên kết */
+  /* Thêm các thuộc tính khác nếu cần thiết */
+}
+
+#left-menu h1, #left-menu h2, #left-menu h3, #left-menu h4, #left-menu h5, #left-menu h6 {
+  font-family: 'Georgia', serif; /* Thay thế 'Georgia' bằng font chữ mong muốn cho tiêu đề */
+  /* Thêm các thuộc tính khác nếu cần thiết */
+}
+
+.price-tag {
+  color: #000; /* Màu chữ giá tiền mặc định */
+  font-weight: bold;
+  margin-top: 5px; /* Khoảng cách từ chữ Bạc xỉu */
+  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu trong 0.3 giây */
+}
+
+
