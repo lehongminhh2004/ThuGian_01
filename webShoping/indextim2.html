@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee store</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        /* Thêm dòng này để đặt màu nền trắng */
+    }
+
+
+    #left-menu {
+        float: left;
+        width: 20%;
+        background-color: #fff;
+        /* Đặt màu nền trắng */
+        padding: 20px;
+        height: 120vh;
+    }
+
+    #left-menu table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #left-menu td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        /* Đường viền phân chia giữa các hàng */
+    }
+
+
+
+    #left-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        /* Màu nâu cà phê */
+    }
+
+    #left-menu ul ul {
+        margin-left: 20px;
+        background-color: #fff;
+        /* Màu nâu cà phê */
+    }
+
+
+    #left-menu ul li {
+        margin-bottom: 10px;
+    }
+
+    #left-menu a {
+        text-decoration: none;
+        color: #000;
+        /* Màu chữ trắng */
+        font-weight: bold;
+        display: block;
+    }
+
+    #left-menu ul ul li {
+        margin-bottom: 5px;
+        background-color: #fff;
+        /* Màu nâu cà phê */
+    }
+
+
+
+    #main-content {
+        margin-left: 20%;
+        padding: 20px;
+    }
+
+    .shop-images {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* 13/12 */
+    .shop-link {
+        width: 25%;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        /* Thêm đường viền */
+        border-radius: 10px;
+        /* Thêm bo tròn */
+        margin: 10px;
+        /* Thêm khoảng cách giữa các phần */
+    }
+
+    .shop-link a {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #6d342d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .shop-link img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        /* Bo tròn cả ảnh */
+    }
+
+    /* 13/12 */
+    .shop-description {
+        text-align: left;
+    }
+
+    .pagination {
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a class="logo" href="#">COFFEE<span>.</span></a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="Search" class="search-input">
+                <div class="search-icon">
+                    <a href="./index.html">
+                        <span class="material-symbols-outlined">search</span></a>
+                </div>
+            </div>
+            <div class="sign-in">
+                <i class="ti-user">
+                    <a href="./loginUser.html">user</a>
+                </i>
+            </div>
+            
+            <div class="cart">
+                <i class="ti-shopping-cart">
+                    <a href="./loginUser.html">Cart</a>
+                </i>
+            </div>
+        </nav>
+    </div>
+    <section class="hero-section">
+
+    </section>
+
+    <!-- Thay đổi phần left menu trong mã HTML -->
+    <div id="left-menu">
+        <table>
+
+            <tr>
+                <td><a href="#">Nước Uống</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1><a href="#">Trà</a></label></h1>
+                    <ul>
+                        <li><label><input type="checkbox" value="TraDao"> <a href="#">Trà Đào</a></label></li>
+                        <li><label><input type="checkbox" value="TraXanh"> <a href="#">Trà Xanh</a></label></li>
+                        <li><label><input type="checkbox" value="TraSen"> <a href="#">Trà Sen</a></label></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1> <a href="#">Cà Phê</a></label></h1>
+                    <ul>
+                        <li><label><input type="checkbox" value="CaPheSua"> <a href="#">Cà Phê Sữa</a></label></li>
+                        <li><label><input type="checkbox" value="CaPheDen"> <a href="#">Cà Phê Đen</a></label></li>
+                        <li><label><input type="checkbox" value="BacXiu"> <a href="#">Bạc Xỉu</a></label></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1> <a href="#">Phin Di</a></label></h1>
+                    <ul>
+                        <li><label><input type="checkbox" value="PhinDiKemSua"> <a href="#">PhinDi Kem Sữa</a></label>
+                        </li>
+                        <li><label><input type="checkbox" value="PhinDiHanhNhan"> <a href="#">PhinDi Hạnh
+                                    Nhân</a></label></li>
+                        <li><label><input type="checkbox" value="PhinDiChoco"> <a href="#">PhinDi Choco</a></label></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h1><a href="#">Bánh</a></label></h1>
+                    <ul>
+                        <li><label><input type="checkbox" value="TraDao"> <a href="#">Bánh Caramel</a></label></li>
+                        <li><label><input type="checkbox" value="TraXanh"> <a href="#">Bánh Phô Mai Cà Phê</a></label>
+                        </li>
+                        <li><label><input type="checkbox" value="TraSen"> <a href="#">Bánh Phô Mai Chanh Dây</a></label>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#">Giá tiền</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <h1><a href="#">Trà</a></label></h1>
+                    <ul>
+                        <li><label><input type="checkbox" value="TraDao"> <a href="#">Từ 0$ đến 1$</a></label></li>
+                        <li><label><input type="checkbox" value="TraXanh"> <a href="#">Từ 1$ đến 2$</a></label></li>
+                        <li><label><input type="checkbox" value="TraSen"> <a href="#">Từ 2$ đến 3$</a></label></li>
+                        <li><label><input type="checkbox" value="TraSen"> <a href="#">Từ 3$ trở lên </a></label></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#" class="browse-button">Tìm kiếm</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div id="main-content">
+        <div class="shop-section">
+            <div class="shop-images">
+                <!-- cà phê -->
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/bacxiu.jpg" alt="card">
+                    <h4>Bạc xỉu</h4>
+                    <div class="price-tag">$3.79</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/capheden.jpg" alt="card">
+                    <h4>Cà phê đen</h4>
+                    <div class="price-tag">$3.99</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/caphesua.jpg" alt="card">
+                    <h4>Cà phê sữa</h4>
+                    <div class="price-tag">$4.49</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <!-- phindi -->
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/PDkemsua.jpg" alt="card">
+                    <h4>PhinDi Kem Sữa</h4>
+                    <div class="price-tag">$3.79</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/PDhanhnhan.jpg" alt="card">
+                    <h4>PhinDi Hạnh Nhân</h4>
+                    <div class="price-tag">$4.19</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/PDchoco1.jpg" alt="card">
+                    <h4>PhinDi Choco</h4>
+                    <div class="price-tag">$3.99</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <!-- tra -->
+                <div class="shop-link">
+                    <h3></h3>
+                    <img src="./asset/css/img/traxanh.jpg" alt="card">
+                    <h4>Trà xanh</h4>
+                    <div class="price-tag">$2.99</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <a href="./chitiet.html"><img src="./asset/css/img/tradao.jpg" alt="card"></a>
+                    <!-- <img src="./asset/css/img/tradao.jpg" alt="card"> -->
+                    <h4>Trà Đào</h4>
+                    <div class="price-tag">$3.49</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <div class="shop-link">
+                    <h3></h3>
+                    <a href="./chitiet.html"><img src="./asset/css/img/tralasen.jpg" alt="card"></a>
+                    <!-- <img src="./asset/css/img/tralasen.jpg" alt="card"> -->
+                    <h4>Trà Hạt Sen</h4>
+                    <div class="price-tag">$2.79</div>
+                    <a href="./cart.html">Shop now</a>
+                </div>
+                <!-- bánh -->
+                <!-- <div class="shop-link">
+          <h3></h3>
+          <img src="./asset/css/img/caramel.jpg" alt="card">
+          <h4>Bánh Caramel</h4>
+          <div class="price-tag">$2.99</div>
+          <a href="./cart.html">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3></h3>
+          <img src="./asset/css/img/pmcp.jpg" alt="card">
+          <h4>Bánh Phô Mai Cà Phê</h4>
+          <div class="price-tag">$3.49</div>
+          <a href="./cart.html">Shop now</a>
+        </div>
+        <div class="shop-link">
+          <h3></h3>
+          <img src="./asset/css/img/pmcd.jpg" alt="card" style="width: 225px; height: 225px;">
+          <h4>Bánh Phô Mai Chanh Dây</h4>
+          <div class="price-tag">$2.79</div>
+          <a href="./cart.html">Shop now</a>
+        </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <a href="#" class="prev">&laquo; </a>
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="next"> &raquo;</a>
+    </div>
+    </div>
+
+    <footer>
+        <a href="#" class="footer-title">
+            Back to top
+        </a>
+        <div id="footer">
+            <div id="row">
+                <div class="footerSocial">
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-facebook"></i>
+                    </a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ">
+                        <i class="mrb15 ti-instagram"></i>
+                    </a>
+                </div>
+                <div class="footerCopy">
+                    <p>© 2004 Coffee. All rights reserved.</p>
+                </div>
+                <div class="footerMail">
+                    <i class="ti-email"></i>
+                    <a href="mailto:customerservice@highlandscoffee.com.vn">customerservice@coffee.com.vn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
