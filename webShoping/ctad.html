@@ -11,6 +11,18 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
   </head>
+  <script>
+    function confirmDelete() {
+      var r = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+      if (r == true) {
+        // Nếu người dùng đồng ý xóa, thực hiện các thao tác xóa ở đây
+        alert("Sản phẩm đã được xóa!");
+      } else {
+        // Nếu người dùng không đồng ý xóa, không làm gì
+        alert("Xóa sản phẩm đã bị hủy!");
+      }
+    }
+  </script>
 
 <body>
   <div id="header">
@@ -55,7 +67,7 @@
         Một hòa quyện hoàn hảo giữa cà phê Robusta mạnh mẽ và sữa đặc đường, Bạc Xỉu mang đến trải nghiệm cà phê độc đáo với vị đắng ngọt đặc trưng.
       </p>
       <a href="./suasp.html">Sửa</a>
-      <a href="#">Xóa</a>
+      <a href="#" class="add-to-cart-btn" onclick="confirmDelete()">Xóa</a>
     </div>
   </div>
 <!-- Tiếp tục từ phần trước của mã HTML -->
@@ -71,7 +83,7 @@
         <h4>Cà Phê Sữa</h4>
         <h5>Giá: $2.99</h5>
         <a href="./suasp.html" class="add-to-cart-btn">Sửa</a>
-        <a href="./cart.html" class="add-to-cart-btn">Xóa</a>
+        <a href="./cart.html" class="add-to-cart-btn" onclick="confirmDelete()">Xóa</a>
       </div>
     </div>
     <div class="suggested-product">
@@ -82,7 +94,7 @@
         <h4>Cà Phê Sữa</h4>
         <h5>Giá: $2.99</h5>
         <a href="./suasp.html" class="add-to-cart-btn">Sửa</a>
-        <a href="./cart.html" class="add-to-cart-btn">Xóa</a>
+        <a href="./cart.html" class="add-to-cart-btn" onclick="confirmDelete()">Xóa</a>
         
       </div>
     </div>
@@ -95,7 +107,7 @@
         <h4>Cà Phê Đen</h4>
         <h5>Giá: $3.49</h5>
         <a href="./suasp.html" class="add-to-cart-btn">Sửa</a>
-        <a href="./cart.html" class="add-to-cart-btn">Xóa</a>
+        <a href="./cart.html" class="add-to-cart-btn" onclick="confirmDelete()">Xóa</a>
       </div>
     </div>
   </div>
