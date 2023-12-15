@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./asset/css/chitiet.css">
+  <link rel="stylesheet" href="./fonts/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="icon" type="image/png" href="./asset/css/img/icon.jpg" sizes="16x16">
   <title>Quản lý đơn hàng</title>
   <style>
     body {
@@ -319,15 +324,34 @@
 <body>
 
   <header>
-    <h1>Quản lý đơn hàng</h1>
+    <div id="header">
+      <nav class="navbar">
+        <div class="nav-logo">
+          <a class="logo" href="./indexAdmin.html">COFFEE<span>.</span></a>
+        </div>
+        <div class="nav-search">
+          <input type="text" placeholder="Search" class="search-input">
+          <div class="search-icon">
+            <a href="#"><span class="material-symbols-outlined">search</span></a>
+            <!-- <span class="material-symbols-outlined">search</span> -->
+          </div>
+        </div>
+        <div class="sign-in">
+          <a href="./admin.html"><i class="ti-package"></i></a>
+        </div>
+        <div class="sign-in">
+          <a href="./themsanpham.html"><i class="ti-upload"></i></a>
+        </div>
+      </nav>
+    </div>
   </header>
 
+  <a href="./don1.html" class="order-link">Đơn hàng 1</a>
   <a href="./don1.html" class="order-link">Đơn hàng 1</a>
   <a href="./don1.html" class="order-link">Đơn hàng 2</a>
   <a href="./don1.html" class="order-link">Đơn hàng 3</a>
   <a href="./don1.html" class="order-link">Đơn hàng 4</a>
   <a href="./don1.html" class="order-link">Đơn hàng 5</a>
-  <a href="./don1.html" class="order-link">Đơn hàng 6</a>
   <!-- Thêm các đường liên kết cho các đơn hàng khác nếu cần -->
   <div class="banner">
     <select id="month">
