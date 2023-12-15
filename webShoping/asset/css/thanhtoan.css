@@ -674,6 +674,10 @@ nav {
     padding: 20px;
     margin-top: 10px;
     transition: transform 0.3s ease-in-out;
+    color: #000;
+  }
+  .fixed-buttons-container .back-to-cart span {
+    color: #000;
   }
   
   label img {
